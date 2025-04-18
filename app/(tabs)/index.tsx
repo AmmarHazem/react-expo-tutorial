@@ -4,6 +4,7 @@ import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import { Link } from "expo-router";
 
 export default function HomeScreen() {
   return (
@@ -41,6 +42,19 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app</ThemedText> to <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
+      <Link
+        href="/dashboard/about"
+        style={{
+          backgroundColor: "black",
+          color: "white",
+          textAlign: "center",
+          paddingVertical: 15,
+          paddingHorizontal: 20,
+          borderRadius: 10,
+        }}
+      >
+        About
+      </Link>
     </ParallaxScrollView>
   );
 }
